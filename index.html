@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>liadala</title>
+    <title>Point Calc</title>
+    <link rel="stylesheet" href="w3.css">
 </head>
-<body>
-    
+
+<body class="w3-pink w3-margin">
+    <div class="w3-card-4 w3-pale-red w3-round">
+        <header class="w3-container w3-purple w3-round">
+            <h1>Calculate Points</h1>
+        </header>
+
+        <div class="w3-container">
+            <p>
+                <label>Minutes</label>
+                <input name="watchtime" oninput="calculatePoints()" class="w3-input" type="number" value="1">
+            </p>
+            <div>
+                <p>
+                    <input class="w3-radio" onchange="calculatePoints()" type="radio" name="subtype" value="1" checked>
+                    <label>Viewer</label>
+                </p>
+                <p>
+                    <input class="w3-radio" onchange="calculatePoints()" type="radio" name="subtype" value="1.2">
+                    <label>Tier 1 Subscriber</label>
+                </p>
+                <p>
+                    <input class="w3-radio" onchange="calculatePoints()" type="radio" name="subtype" value="1.4">
+                    <label>Tier 2 Subscriber</label>
+                </p>
+                <p>
+                    <input class="w3-radio" onchange="calculatePoints()" type="radio" name="subtype" value="2">
+                    <label>Tier 3 Subscriber</label>
+                </p>
+            </div>
+        </div>
+
+        <footer class="w3-container w3-purple w3-round">
+            <h5 id="result">It takes </h5>
+        </footer>
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
